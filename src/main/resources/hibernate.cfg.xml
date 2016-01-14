@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!--
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/logdatabase</property>  &lt;!&ndash; db1 - NAME of Database&ndash;&gt;
+        <property name="hibernate.connection.username">Server</property>
+        <property name="hibernate.connection.password">12345</property>
+        -->
+        <property name="hibernate.connection.pool_size">0</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property> <!-- View in console-->
+
+        <!--<property name="hibernate.hbm2ddl.auto">update</property> &lt;!&ndash; Create tables depend from object  (create/update)&ndash;&gt;-->
+        <!--<property name="hibernate.connection.autocommit">false</property> &lt;!&ndash; For Turn ON/OFF transaction&ndash;&gt;-->
+
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <mapping class="processing.object.Dump"/> <!-- Object for injection in BASE-->
+        <mapping class="processing.object.Warning"/>
+        <!-- DataBase schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

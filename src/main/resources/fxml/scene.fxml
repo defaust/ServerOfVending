@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="586.0" prefWidth="1188.0" xmlns="http://javafx.com/javafx/8" fx:controller="FXController.MainController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="597.0" prefWidth="1188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <HBox prefHeight="575.0" prefWidth="1110.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="137.0">
+                           <children>
+                              <TableView fx:id="connectedMain" prefHeight="400.0" prefWidth="137.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="connectedIMEI" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="105.0" resizable="false" text="IMEI" />
+                                    <TableColumn fx:id="connectedProgress" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="30.0" resizable="false" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane>
+                           <children>
+                              <SplitPane dividerPositions="0.288" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <items>
+                                    <AnchorPane>
+                                       <children>
+                                          <TableView fx:id="tableMain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="table1" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="130.0" resizable="false" text="Socket" />
+                                                <TableColumn fx:id="table2" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="75.0" resizable="false" text="Process" />
+                                                <TableColumn fx:id="table3" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="600.0" resizable="false" text="Messages" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane>
+                                       <children>
+                                          <ListView fx:id="heapList" prefHeight="278.0" prefWidth="807.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <BarChart fx:id="chart" alternativeColumnFillVisible="true" barGap="0.0" categoryGap="0.0" prefHeight="573.0" prefWidth="502.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <xAxis>
+                                    <CategoryAxis disable="true" side="BOTTOM" visible="false" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="yAxis" side="RIGHT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                           <padding>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="10.0" prefWidth="1178.0">
+               <children>
+                  <SplitPane dividerPositions="0.811973018549747" prefHeight="32.0" prefWidth="1178.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                        <AnchorPane />
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
